@@ -1,0 +1,20 @@
+Construct a GatorBST object
+Insert nodes
+
+Class Methods to Check
+
+1. Height: Check that the height that is returns is correct.
+
+2. Insert: Check that that the UFID validation T and F in insert is correct.
+3. SearchID: Check for correct return.
+4. SearchID: Check if it returns empty vector correctly.
+5. SearchName: Check for correct return.
+6. SearchName: Check if returns empty vector correctly.
+7. Remove: Check if remove T and F is correct.
+8. Remove: Check if inorder successor replaces removed node.
+9. Preorder: Check traversal T and F.
+10. Inorder: Check traversal T and F.
+11. Postorder: Check traversal T and F.
+12: Check all 3 traversals if remove is done.
+
+Binary Tree to check: 9 7 12 6 10 15

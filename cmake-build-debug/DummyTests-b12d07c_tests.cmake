@@ -1,0 +1,5 @@
+add_test( [==[Example Test Name - Change me!]==] C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/DummyTests.exe [==[Example Test Name - Change me!]==]  )
+set_tests_properties( [==[Example Test Name - Change me!]==] PROPERTIES WORKING_DIRECTORY C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug)
+add_test( [==[Test 2]==] C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/DummyTests.exe [==[Test 2]==]  )
+set_tests_properties( [==[Test 2]==] PROPERTIES WORKING_DIRECTORY C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug)
+set( DummyTests_TESTS [==[Example Test Name - Change me!]==] [==[Test 2]==])

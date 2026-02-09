@@ -1,0 +1,21 @@
+# ninja log v6
+1	44	7922968598144948	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-mkdir	786bede4674a02cb
+1	44	7922968598144948	C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-mkdir	786bede4674a02cb
+45	9507	7922968692765535	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-download	77e4f20cd7dc6053
+45	9507	7922968692765535	C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-download	77e4f20cd7dc6053
+9521	9642	7922968692952086	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update	8fc9881ad8491f45
+9521	9642	7922968692952086	C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update	8fc9881ad8491f45
+9642	9682	7922968694524537	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-patch	d48992db301e387c
+9642	9682	7922968694524537	C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-patch	d48992db301e387c
+9682	9721	7922968694906713	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-configure	d85aeb6adf50c2df
+9682	9721	7922968694906713	C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-configure	d85aeb6adf50c2df
+9721	9760	7922968695302581	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-build	f2f31c5113380f9b
+9721	9760	7922968695302581	C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-build	f2f31c5113380f9b
+9760	9801	7922968695705025	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-install	d57a8f243752d170
+9760	9801	7922968695705025	C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-install	d57a8f243752d170
+9801	9840	7922968696103603	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-test	977b8aac69ccefff
+9801	9840	7922968696103603	C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-test	977b8aac69ccefff
+9841	9897	7922968696665874	CMakeFiles/catch2-populate-complete	488d7161d27f33f1
+9841	9897	7922968696665874	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-done	488d7161d27f33f1
+9841	9897	7922968696665874	C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/_deps/catch2-subbuild/CMakeFiles/catch2-populate-complete	488d7161d27f33f1
+9841	9897	7922968696665874	C:/Users/sarah/CLionProjects/Quiz4/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-done	488d7161d27f33f1
