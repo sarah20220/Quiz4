@@ -32,8 +32,6 @@ TEST_CASE("Checking insert doesn't allow duplicate UIDs.", "[Insert]"){
 	REQUIRE(test.insert(1, "a") == true);
 	REQUIRE(test.insert(1, "b") == false);
 }
-
-
 TEST_CASE("Checking insert.", "[Insert]"){
 	// instantiate any class members that you need to test here
 	GatorBST<string> test;
@@ -44,6 +42,7 @@ TEST_CASE("Checking insert.", "[Insert]"){
 	// all REQUIRE blocks must evaluate to true for the whole test to pass
 	REQUIRE(test.height() == 1);
 }
+
 
 TEST_CASE("Checking height of a balanced tree.", "[Height]"){
 	// instantiate any class members that you need to test here
@@ -59,7 +58,6 @@ TEST_CASE("Checking height of a balanced tree.", "[Height]"){
 	// all REQUIRE blocks must evaluate to true for the whole test to pass
 	REQUIRE(test.height() == 3);
 }
-
 TEST_CASE("Checking height of a asymmetric tree.", "[Height]"){
 	// instantiate any class members that you need to test here
 	GatorBST<string> test;
@@ -75,7 +73,6 @@ TEST_CASE("Checking height of a asymmetric tree.", "[Height]"){
 	// all REQUIRE blocks must evaluate to true for the whole test to pass
 	REQUIRE(test.height() == 4);
 }
-
 TEST_CASE("Checking height with only left child.", "[Height]"){
 	// instantiate any class members that you need to test here
 	GatorBST<string> test;
@@ -86,7 +83,6 @@ TEST_CASE("Checking height with only left child.", "[Height]"){
 	// all REQUIRE blocks must evaluate to true for the whole test to pass
 	REQUIRE(test.height() == 3);
 }
-
 TEST_CASE("Checking height with only right child.", "[Height]"){
 	// instantiate any class members that you need to test here
 	GatorBST<string> test;
@@ -97,7 +93,6 @@ TEST_CASE("Checking height with only right child.", "[Height]"){
 	// all REQUIRE blocks must evaluate to true for the whole test to pass
 	REQUIRE(test.height() == 3);
 }
-
 TEST_CASE("Checking height of empty tree.", "[Height]"){
 	// instantiate any class members that you need to test here
 	GatorBST<string> test;
@@ -105,7 +100,6 @@ TEST_CASE("Checking height of empty tree.", "[Height]"){
 	// all REQUIRE blocks must evaluate to true for the whole test to pass
 	REQUIRE(test.height() == 0);
 }
-
 TEST_CASE("Checking height only root.", "[Height]"){
 	// instantiate any class members that you need to test here
 	GatorBST<string> test;
@@ -115,22 +109,193 @@ TEST_CASE("Checking height only root.", "[Height]"){
 	REQUIRE(test.height() == 1);
 }
 
+
+TEST_CASE("Check SearchID with empty tree.", "[SearchID]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+	auto SearchResult = test.SearchID(1);
+	// all REQUIRE blocks must evaluate to true for the whole test to pass
+	REQUIRE(SearchResult.has_value() == false);
+}
+TEST_CASE("Check SearchID with nonexistent ID.", "[SearchID]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+	test.insert(2, "a");
+	test.insert(1, "b");
+	test.insert(3, "c");
+
+	auto SearchResult = test.SearchID(4);
+	REQUIRE(SearchResult.has_value() == false);
+}
+TEST_CASE("Check SearchID with 1 node tree.", "[SearchID]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+	test.insert(1, "root");
+
+   	REQUIRE(test.SearchID(1).value() == "root");
+
+}
+TEST_CASE("Check SearchID of every node in a 3 level tree.", "[SearchID]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+	test.insert(9, "a");
+	test.insert(5, "b");
+	test.insert(12, "c");
+	test.insert(6, "d");
+	test.insert(4, "e");
+	test.insert(10, "f");
+	test.insert(15, "g");
+	test.insert(7, "h");
+
+	// all REQUIRE blocks must evaluate to true for the whole test to pass
+	SECTION("a") { REQUIRE(test.SearchID(9).value() == "a"); }
+	SECTION("b") { REQUIRE(test.SearchID(5).value() == "b"); }
+	SECTION("c") { REQUIRE(test.SearchID(12).value() == "c"); }
+	SECTION("d") { REQUIRE(test.SearchID(6).value() == "d"); }
+	SECTION("e") { REQUIRE(test.SearchID(4).value() == "e"); }
+	SECTION("f") { REQUIRE(test.SearchID(10).value() == "f"); }
+	SECTION("g") { REQUIRE(test.SearchID(15).value() == "g"); }
+	SECTION("h") { REQUIRE(test.SearchID(7).value() == "h"); }
+};
+
+
+TEST_CASE("SearchName in an empty tree.", "[SearchName]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+
+};
+TEST_CASE("SearchName for nonexistent name.", "[SearchName]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+
+};
+TEST_CASE("SearchName for a 1 node tree", "[SearchName]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+
+};
+TEST_CASE("SearchName for multiple IDs.", "[SearchName]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+
+};
+TEST_CASE("SearchName for every node in a 3 level tree.", "[SearchName]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+
+};
+
+TEST_CASE("Remove in 1 node tree.", "[Remove]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+    test.insert(1, "a");
+    REQUIRE(test.remove(1) == true);
+};
+TEST_CASE("Remove in empty tree.", "[Remove]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+    REQUIRE(test.Remove(1) == false);
+};
+TEST_CASE("Remove in left skewed tree.", "[Remove]"){
+
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+
+
+
+};
+TEST_CASE("Remove in right skewed tree.", "[Remove]"){
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+
+};
+TEST_CASE("Remove all nodes in a tree.", "[Remove]"){
+	// instantiate any class members that you need to test here
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+	test.insert(9, "a");
+	test.insert(7, "b");
+	test.insert(12, "c");
+	test.insert(8, "d");
+	test.insert(6, "e");
+	test.insert(10, "f");
+	test.insert(15, "g");
+
+	// all REQUIRE blocks must evaluate to true for the whole test to pass
+	REQUIRE(test.Remove(15) == true); }
+	REQUIRE(test.Remove(10) == true); }
+	REQUIRE(test.Remove(6) == true); }
+	REQUIRE(test.Remove(8) == true); }
+	REQUIRE(test.Remove(12) == true); }
+	REQUIRE(test.Remove(7) == true); }
+	REQUIRE(test.Remove(9) == true); }
+};
+TEST_CASE("Remove nodes and check for inorder replacement", "[Remove]"){
+	// instantiate any class members that you need to test here
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+	test.insert(9, "a");
+	test.insert(7, "b");
+	test.insert(12, "c");
+	test.insert(8, "d");
+	test.insert(6, "e");
+	test.insert(10, "f");
+	test.insert(15, "g");
+
+	// all REQUIRE blocks must evaluate to true for the whole test to pass
+	SECTION("a") {
+          REQUIRE(test.Remove(9) == true);
+          REQUIRE(test.TraverseInorder() == );
+    }
+	SECTION("b") {
+          REQUIRE(test.Remove(7) == true);
+          REQUIRE(test.TraverseInorder() == );
+    }
+	SECTION("c") {
+          REQUIRE(test.Remove(12) == true);
+          REQUIRE(test.TraverseInorder() == );
+    }
+	SECTION("d") {
+          REQUIRE(test.Remove(8) == true);
+          REQUIRE(test.TraverseInorder() == );
+    }
+	SECTION("e") {
+          REQUIRE(test.Remove(6) == true);
+          REQUIRE(test.TraverseInorder() == );
+    }
+	SECTION("f") {
+          REQUIRE(test.Remove(10) == true);
+		  REQUIRE(test.TraverseInorder() == );
+    }
+	SECTION("g") {
+          REQUIRE(test.Remove(15) == true);
+          REQUIRE(test.TraverseInorder() == );
+    }
+};
+
+
 TEST_CASE("Checking Traversal Methods", "[Inorder][Preorder][Postorder]"){
 	// you can also use "sections" to share setup code between tests, for example:
-	int one = 1;
+	// instantiate any class members that you need to test here
+	GatorBST<string> test;
+	test.insert(9, "a");
+	test.insert(7, "b");
+	test.insert(12, "c");
+	test.insert(8, "d");
+	test.insert(6, "e");
+	test.insert(10, "f");
+	test.insert(15, "g");
 
-	SECTION("Inorder") {
-		int num = one + 1;
+	// all REQUIRE blocks must evaluate to true for the whole test to pass
+	SECTION("Inorder Test") {
 		REQUIRE(num == 2);
 	};
 
-	SECTION("Preorder") {
-		int num = one + 2;
+	SECTION("Preorder Test") {
 		REQUIRE(num == 3);
 	};
 
-	SECTION("Postorder") {
-		int num = one + 2;
+	SECTION("Postorder Test") {
 		REQUIRE(num == 3);
 	};
 

@@ -32,7 +32,6 @@ public:
 
     // Class Methods
 
-
     // Returns 1-based height of tree. In other words, if it is empty, the height is 0, otherwise this returns the length
     //  of the longest path in nodes.
     int Height();
