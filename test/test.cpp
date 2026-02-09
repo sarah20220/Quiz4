@@ -314,33 +314,20 @@ TEST_CASE("Remove nodes and check for inorder replacement", "[Remove]"){
 
 	// Inorder for original tree: 6, 7, 8, 9, 10, 12, 15
 
-	SECTION("remove 9") {
+	SECTION("Remove 9 and check replacement is 10.") {
           REQUIRE(test.Remove(9) == true);
-          REQUIRE(test.TraverseInorder() == vector<int>{6, 7, 8, 10, 12, 15});
+		  REQUIRE(test.TraverseInorder()  == vector<int>{6, 7, 8, 10, 12, 15});
+		  REQUIRE(test.TraversePreorder() == vector<int>{10, 7, 6, 8, 12, 15});
     };
-	SECTION("remove 7") {
+	SECTION("Remove 7 and check replacement is 8.") {
           REQUIRE(test.Remove(7) == true);
-          REQUIRE(test.TraverseInorder() == vector<int>{6, 8, 9, 10, 12, 15});
+		  REQUIRE(test.TraverseInorder()  == vector<int>{6, 8, 9, 10, 12, 15});
+		  REQUIRE(test.TraversePreorder() == vector<int>{9, 8, 6, 12, 10, 15});
     };
-	SECTION("remove 12") {
+	SECTION("Remove 12 and check replacement is 15.") {
           REQUIRE(test.Remove(12) == true);
-          REQUIRE(test.TraverseInorder() == vector<int>{6, 7, 8, 9, 10, 15});
-    };
-	SECTION("remove 8") {
-          REQUIRE(test.Remove(8) == true);
-          REQUIRE(test.TraverseInorder() == vector<int>{6, 7, 9, 10, 12, 15});
-    };
-	SECTION("remove 6") {
-          REQUIRE(test.Remove(6) == true);
-          REQUIRE(test.TraverseInorder() == vector<int>{7, 8, 9, 10, 12, 15});
-    };
-	SECTION("remove 10") {
-          REQUIRE(test.Remove(10) == true);
-		  REQUIRE(test.TraverseInorder() == vector<int>{6, 7, 8, 9, 12, 15});
-    };
-	SECTION("remove 15") {
-          REQUIRE(test.Remove(15) == true);
-          REQUIRE(test.TraverseInorder() == vector<int>{6, 7, 8, 9, 10, 12});
+		  REQUIRE(test.TraverseInorder()  == vector<int>{6, 7, 8, 9, 10, 15});
+		  REQUIRE(test.TraversePreorder() == vector<int>{9, 7, 6, 8, 15, 10});
     };
 };
 
